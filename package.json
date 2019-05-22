@@ -1,0 +1,50 @@
+{
+  "name": "@smadey/react-native-refreshable",
+  "version": "0.1.1",
+  "description": "Custom ScrollView's refresh control",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./*.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Smadey",
+    "email": "smadey@163.ccom"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-native",
+    "react-native-component",
+    "refreshcontrol",
+    "scrollview",
+    "refreshable",
+    "mobile",
+    "android",
+    "ios"
+  ],
+  "homepage": "https://github.com/smadey/react-native-refreshable",
+  "bugs": {
+    "url": "https://github.com/smadey/react-native-refreshable/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/smadey/react-native-refreshable.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-native": "^0.59.0",
+    "react-native-gesture-handler": "^1.2.1"
+  }
+}
