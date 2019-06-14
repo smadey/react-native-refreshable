@@ -11,6 +11,7 @@ export default createRefreshableComponent({
     const state = useMemo(() => ({ enabled: true }), [])
     const wrapperHandlers = useMemo(() => (
       PanResponder.create({
+        onStartShouldSetPanResponder: (e, { dx, dy }) => state.enabled && onPanRespond(dx, dy),
         onMoveShouldSetPanResponder: (e, { dx, dy }) => state.enabled && onPanRespond(dx, dy),
         onPanResponderGrant: () => {},
         onPanResponderMove: (e, { dx, dy }) => onPanMove(dx, dy),

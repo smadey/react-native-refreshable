@@ -10,6 +10,8 @@ import {
 
 import createRefreshableComponent from './createRefreshableComponent'
 
+const activeOffset = [-10, 10]
+
 export default createRefreshableComponent({
   usePanResponder({ onPanRespond, onPanMove, onPanRelease }) {
     const [wrapper, setWrapperEnabled] = useGestureHandler()
@@ -29,6 +31,8 @@ export default createRefreshableComponent({
     const renderWrapper = props => (
       <PanGestureHandler
         ref={wrapper}
+        activeOffsetX={props.horizontal ? activeOffset : undefined}
+        activeOffsetY={!props.horizontal ? activeOffset : undefined}
         simultaneousHandlers={scroller}
         maxPointers={1}
         onGestureEvent={onWrapperGestureEvent}
@@ -64,7 +68,7 @@ function useGestureHandler() {
   const setEnabled = useCallback((enabled) => {
     if (state.enabled !== enabled) {
       state.enabled = enabled
-      ref.current && ref.current.setNativeProps(state) // eslint-disable-line no-unused-expressions
+      ref.current && ref.current.setNativeProps(state)
     }
   }, [])
   return [ref, setEnabled]

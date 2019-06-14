@@ -5,9 +5,12 @@
   "parser": "babel-eslint",
   "rules": {
     "import/no-unresolved": [2, { "ignore": ["^react(-native)?$", "react-native-gesture-handler"] }],
+    "max-len": [2, { "code": 150 }],
     "no-func-assign": [0],
     "no-param-reassign": [0],
+    "no-unused-expressions": [0],
     "no-use-before-define": [0],
+    "react/destructuring-assignment": [0],
     "react/jsx-filename-extension": [0],
     "react/prop-types": [0],
     "prefer-destructuring": [0],

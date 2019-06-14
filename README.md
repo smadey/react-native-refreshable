@@ -19,17 +19,28 @@ and follow [the steps](https://kmagiera.github.io/react-native-gesture-handler/d
 ## Usage
 
 ```js
-import Refreshable, { createRenderRefresher } from 'react-native-refreshable';
+import Refreshable, { useSpinner } from 'react-native-refreshable'
 
 // before
 <ScrollView {...props} />
 
 // after
-const renderRefresher = React.useMemo(() => createRenderRefresher(), [])
+const RefreshComponent = React.memo(({ status }) => {
+  const progress = useSpinner(status === 2 || status === 3)
+  return (
+    <View style={{ alignItems: 'center', flexDirection: 'row', height: 60, justifyContent: 'center' }}>
+      <Animated.Image
+        resizeMethod="scale"
+        source={{ uri: 'https://readx-her-1252317822.image.myqcloud.com/boss/5322_spinner.png' }}
+        style={{ height: 16, width: 16, transform: [{ rotate: progress.interpolate({ inputRange: [0, 100], outputRange: ['0deg', '360deg'] }) }] }}
+      />
+    </View>
+  )
+})
 const onRefresh = React.useCallback(() => {
   return new Promise(resolve => setTimeout(resolve, 1500))
 }, [])
-<Refreshable {...props} renderRefresher={renderRefresher} onRefresh={onRefresh} />
+<Refreshable {...props} RefreshComponent={RefreshComponent} onRefresh={onRefresh} />
 ```
 
 ## Properties
@@ -37,5 +48,5 @@ const onRefresh = React.useCallback(() => {
 
 | Prop | Description | Default |
 |---|---|---|
-|**`renderRefresher`**|A function that is called when Refresher render. The function is called with `status`, `visible`, `refreshable` and `refreshing` props. ||
+|**`RefreshComponent`**|A component with `status` and `position` props. ||
 |**`onRefresh`**|A function that is called when Component has been pull down. ||
