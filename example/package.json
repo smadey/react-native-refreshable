@@ -1,22 +1,22 @@
 {
-  "name": "refreshable-example",
-  "version": "0.0.1",
-  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "react-native start --reset-cache",
-    "dev:android": "react-native run-android",
-    "dev:ios": "react-native run-ios",
-    "dev:js": "react-native start"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
   },
   "dependencies": {
+    "expo": "^33.0.0",
     "react": "16.8.3",
-    "react-native": "0.59.0",
-    "react-native-gesture-handler": "^1.2.1",
-    "react-native-refreshable": ".."
+    "react-dom": "^16.8.6",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-refreshable": "..",
+    "react-native-web": "^0.11.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/runtime": "^7.4.4",
-    "metro-react-native-babel-preset": "^0.54.1"
-  }
+    "babel-preset-expo": "^5.1.1"
+  },
+  "private": true
 }
