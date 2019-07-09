@@ -34,7 +34,6 @@ export default createRefreshableComponent({
         activeOffsetX={props.horizontal ? activeOffset : undefined}
         activeOffsetY={!props.horizontal ? activeOffset : undefined}
         simultaneousHandlers={scroller}
-        maxPointers={1}
         onGestureEvent={onWrapperGestureEvent}
         onHandlerStateChange={onWrapperHandlerStateChange}
         {...props}
@@ -44,7 +43,7 @@ export default createRefreshableComponent({
       <NativeViewGestureHandler
         ref={scroller}
         simultaneousHandlers={wrapper}
-        maxPointers={1}
+        disallowInterruption
       >
         <ScrollView {...props} />
       </NativeViewGestureHandler>

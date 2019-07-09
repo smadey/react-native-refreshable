@@ -3,6 +3,13 @@
     "airbnb"
   ],
   "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".android.js", ".ios.js", ".js"]
+      }
+    }
+  },
   "rules": {
     "import/no-unresolved": [2, { "ignore": ["^react(-native)?$", "react-native-gesture-handler"] }],
     "max-len": [2, { "code": 150 }],

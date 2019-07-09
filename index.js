@@ -34,4 +34,4 @@ export function useSpinner(animating) {
   return progress
 }
 
-export { default } from './refreshable' // eslint-disable-line import/no-unresolved
+export { default } from './refreshable'
