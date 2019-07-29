@@ -3,7 +3,7 @@ Custom ScrollView's refresh control
 
 ## Installation
 ```sh
-npm install --save react-native-refreshable
+npm install --save @smadey/react-native-refreshable
 ```
 If you are using Expo, you are done. Otherwise, continue to the next step.
 
