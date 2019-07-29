@@ -90,6 +90,43 @@ function App() {
         <Text style={styles.txt}>Welcome to React Native!</Text>
         <Text style={styles.txt}>Welcome to React Native!</Text>
         <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
+        <Text style={styles.txt}>Welcome to React Native!</Text>
       </Refreshable>
     </View>
   )

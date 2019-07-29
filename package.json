@@ -1,6 +1,6 @@
 {
   "name": "@smadey/react-native-refreshable",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Custom ScrollView's refresh control",
   "main": "index.js",
   "license": "MIT",

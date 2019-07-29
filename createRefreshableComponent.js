@@ -155,12 +155,16 @@ function createRefreshableComponent({ usePanResponder }) {
         return true
       },
       onPanMove(dx, dy) {
+        if (state.sy > 0) return
+
         const { rH, ptrH } = state
         const wrapperY = dy > rH ? ((dy - rH) * 0.4 + rH * 0.6) : Math.max(dy * 0.6, 0)
         setRefresherStatus(wrapperY >= ptrH ? STATUS_PULL_OK : STATUS_PULLING)
         aWrapperY.setValue(wrapperY)
       },
       onPanRelease() {
+        if (state.sy > 0) return
+
         setScrollerScrollEnabled(false) // call setPanEnabled auto
         const restore = () => {
           timing(aWrapperY).then(() => {
@@ -195,6 +199,12 @@ function createRefreshableComponent({ usePanResponder }) {
       if (state.sy < 0) {
         scroller.current && scroller.current.scrollTo({ x: 0, y: 0, animated: true })
       }
+    })
+    props = useEvent(props, 'onMomentumScrollBegin', () => {
+      setPanEnabled(false)
+    })
+    props = useEvent(props, 'onMomentumScrollEnd', () => {
+      setPanEnabled(true)
     })
 
     return (
